@@ -1,0 +1,36 @@
+
+.book{isolation:isolate;overflow:hidden}
+.opening{background:transparent;perspective:1400px}
+.cover-art{overflow:visible;background:none!important;transform:none!important;opacity:1!important;transition:none}
+.cover-wing{position:absolute;top:0;bottom:0;width:50%;overflow:hidden;backface-visibility:hidden;background:#a7144b;transition:transform 1.8s cubic-bezier(.22,.65,.18,1),filter 1.8s;will-change:transform}
+.cover-wing:first-child{left:0;transform-origin:left center;border-right:1px solid #ebcc8055}
+.cover-wing:last-child{right:0;transform-origin:right center;border-left:1px solid #ebcc8055}
+.wing-art{position:absolute;top:0;bottom:0;width:200%;background:url('royal-cover-v2.webp') center/contain no-repeat}
+.cover-wing:last-child .wing-art{right:0}
+.opening.opened .cover-wing:first-child{transform:rotateY(-108deg);filter:brightness(.6)}
+.opening.opened .cover-wing:last-child{transform:rotateY(108deg);filter:brightness(.6)}
+.opening-copy{transition:opacity .4s,transform .5s}
+.opening.opened .opening-copy{transform:translateY(-12px)}
+.opening:not(.opened) .seal{animation:seal-glow 3.8s ease-in-out infinite}
+@keyframes seal-glow{50%{box-shadow:0 0 0 5px #f5d78b30,0 0 25px #f3d08466}}
+.page.enter{animation:chapter-in .85s cubic-bezier(.16,1,.3,1) both}
+@keyframes chapter-in{from{opacity:0;transform:translateX(calc(var(--direction,1)*35px)) rotateY(calc(var(--direction,1)*8deg)) scale(.98)}to{opacity:1;transform:none}}
+.motion-reveal{animation:copy-reveal .85s cubic-bezier(.2,.7,.2,1) both;animation-delay:var(--reveal-delay,0ms)}
+@keyframes copy-reveal{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+.ambient-field{position:absolute;inset:0;overflow:hidden;pointer-events:none;z-index:2;contain:paint}
+.ambient-petal{position:absolute;left:var(--x);top:-20px;width:var(--size);height:calc(var(--size)*1.5);border-radius:80% 0 80% 20%;background:var(--petal);opacity:0;animation:petal-fall var(--duration) linear infinite;animation-delay:var(--delay)}
+@keyframes petal-fall{0%{transform:translate3d(0,-20px,0) rotate(0);opacity:0}12%{opacity:.62}85%{opacity:.45}100%{transform:translate3d(var(--drift),var(--travel),0) rotate(320deg);opacity:0}}
+.ambient-star{position:absolute;left:var(--x);top:var(--y);width:3px;height:3px;border-radius:50%;background:#ffe7a6;box-shadow:0 0 7px 2px #ffe1a466;animation:star-breathe var(--duration) ease-in-out infinite;animation-delay:var(--delay)}
+@keyframes star-breathe{0%,100%{opacity:.12;transform:scale(.7)}50%{opacity:.8;transform:scale(1.25)}}
+.light-beam{position:absolute;bottom:18%;left:19%;width:38%;height:41%;transform-origin:50% 100%;background:linear-gradient(0deg,#eab5f025,transparent);clip-path:polygon(42% 100%,58% 100%,100% 0,0 0);animation:light-sweep 9s ease-in-out infinite;mix-blend-mode:screen}
+.light-beam.second{left:49%;animation-delay:-4.5s;background:linear-gradient(0deg,#ffe5a525,transparent)}
+@keyframes light-sweep{0%,100%{transform:rotate(-17deg);opacity:.3}50%{transform:rotate(18deg);opacity:.7}}
+.poster-copy,.intro-copy,.band-sign{z-index:3}
+.primary,.secondary,.contacts a,.navigation button{transition:transform .2s ease,background-color .2s ease,box-shadow .2s ease}
+.primary:active,.secondary:active,.navigation button:active{transform:scale(.96)}
+.primary:hover{box-shadow:0 5px 18px #76234320;transform:translateY(-2px)}
+.page[hidden] *,body.motion-paused *{animation-play-state:paused!important}
+.calm .cover-wing{transition:none}.calm .cover-wing,.calm .opening-copy{filter:none}
+.calm .ambient-field{display:none}.calm .motion-reveal,.calm .page.enter,.calm .seal{animation:none!important}
+.calm .primary,.calm .secondary,.calm .contacts a,.calm .navigation button{transition:none;transform:none}
+@media(prefers-reduced-motion:reduce){body:not(.full-motion) .ambient-field{display:none}body:not(.full-motion) .cover-wing{transition:none}body:not(.full-motion) .motion-reveal,body:not(.full-motion) .seal{animation:none}}

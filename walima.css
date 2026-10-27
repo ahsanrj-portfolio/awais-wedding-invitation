@@ -1,0 +1,36 @@
+
+.walima{background:#07121d;color:#f5eee2;--wine:#e8d6ae}
+.walima-poster{position:relative;overflow:hidden;aspect-ratio:9/16;background:#07121d}
+.walima-poster video{display:block;width:100%;height:100%;object-fit:cover}
+.walima-copy{position:absolute;left:9%;right:9%;top:20%;height:41%;background:#08131f;color:#f8efdc;text-align:center;padding:4% 3%;display:flex;flex-direction:column;justify-content:center;z-index:2;background-image:radial-gradient(circle at 20% 30%,#bbd8ea55 0 .6px,transparent 1px);background-size:41px 53px}
+.walima-copy .eyebrow{font-size:8px;color:#e2cc9f;letter-spacing:1px}
+.walima .walima-copy h2{font-size:52px;margin:8px 0;line-height:1;font-style:italic}
+.walima-names{font-size:18px;line-height:1.2}.walima-date{font-size:17px;margin-top:12px}
+.walima-time{font:11px/1.8 var(--sans);margin-top:10px}
+.walima .walima-copy h3{font-size:22px;margin-top:12px}.walima-address{font-size:14px;margin-top:4px}
+.video-control{position:absolute;right:10px;bottom:10px;z-index:3;min-height:44px;padding:9px 12px;border:1px solid #d9c59f;background:#08131fe6;color:#fff1d0;font:11px var(--sans)}
+.walima .event-content{background:#0a1724;color:#f7eee1}.walima .eyebrow,.walima .ornament{color:#e6cfa2}
+.walima .primary{background:#e6cfa2;color:#132231}.walima .micro{color:#d0c7bc}
+.navigation{padding-left:3px;padding-right:3px}.navigation>button{width:30px}nav button{padding:10px 6px;font-size:10px}
+@media(max-width:350px){nav button{padding:10px 4px;font-size:9px}.walima .walima-copy h2{font-size:39px;margin:5px 0}.walima-copy .eyebrow{font-size:6px}.walima-names{font-size:15px}.walima-date{font-size:14px;margin-top:7px}.walima-time{font-size:9px;margin-top:6px}.walima .walima-copy h3{font-size:18px;margin-top:7px}.walima-address{font-size:12px}}
+
+/* Compact details panel: more of the scene remains visible. */
+.walima-copy{left:13%;right:13%;top:22%;height:35%;padding:3%}
+.walima-copy .eyebrow{font-size:7px}
+.walima .walima-copy h2{font-size:44px;margin:6px 0}
+.walima-names{font-size:16px}.walima-date{font-size:15px;margin-top:9px}
+.walima-time{font-size:10px;margin-top:8px}
+.walima .walima-copy h3{font-size:20px;margin-top:9px}
+.walima-address{font-size:13px;margin-top:3px}
+@media(max-width:350px){.walima-copy .eyebrow{font-size:6px}.walima .walima-copy h2{font-size:35px;margin:4px 0}.walima-names{font-size:13px}.walima-date{font-size:12px;margin-top:6px}.walima-time{font-size:9px;margin-top:5px}.walima .walima-copy h3{font-size:17px;margin-top:6px}.walima-address{font-size:11px}}
+
+.walima-names{font-size:17px}.walima-date{font-size:16px}.walima-time{font-size:11px}.walima-address{font-size:14px}
+@media(max-width:350px){.walima-names{font-size:14px}.walima-date{font-size:13px}.walima-time{font-size:10px}.walima-address{font-size:12px}}
+
+
+/* Narrower original panel; height and typography retained. */
+.walima-copy{left:18%;right:18%}
+
+/* Dark centre with softly blended, arched edges. */
+.walima-copy{background:none;isolation:isolate;text-shadow:0 1px 4px #0009;overflow:visible}
+.walima-copy:before{content:'';position:absolute;inset:-12px -14px;z-index:-1;pointer-events:none;border-radius:90px 90px 34px 34px;background:#07131ff5;filter:blur(14px)}

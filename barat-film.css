@@ -1,0 +1,16 @@
+
+.barat{--wine:#7f233b;background:#faf5e9;color:#5c302e}
+.barat-film{position:relative;aspect-ratio:9/17;background:#f7f4e9;overflow:hidden}
+.barat-film>video{display:block;width:100%;height:auto}
+.barat .scene-heading{position:absolute;top:0;left:0;right:0;height:8%;z-index:2;margin:0;padding:2% 0;background:#faf8ee;color:#7f233b;font-size:34px;line-height:1.2;font-style:italic;font-weight:500;display:flex;align-items:center;justify-content:center}
+.foreground-ground{position:absolute;inset:76% 0 0;background:linear-gradient(#e7e6dc,#f5f1e4 70%);z-index:1;border-top:1px solid #deded244}
+.foreground-ground:after{content:'';position:absolute;inset:0;background:repeating-linear-gradient(0deg,transparent 0 32px,#8f8e7512 33px 34px);transform:perspective(300px) rotateX(25deg);transform-origin:top}
+.barat-film>.foreground-bride{position:absolute;bottom:0;left:50%;transform:translateX(-50%);height:33%;width:auto;max-width:70%;object-fit:contain;z-index:2;filter:drop-shadow(0 5px 5px #44252230)}
+.barat-video-control{position:absolute;right:9px;bottom:10px;z-index:4;background:#fff9eeeb;border:1px solid #966b49;min-height:44px;padding:8px 10px;color:#6a2435;font:10px var(--sans)}
+.barat .event-content{background:#fff5e5;color:#5c302e;border-color:#b9936755}
+.barat .event-content .eyebrow,.barat .ornament{color:#855c2e}
+.barat .event-content .primary{background:#7f233b;border-color:#7f233b;color:#fff7ea}
+.barat .event-content .secondary{color:#7f233b;border-color:#ac8055}
+.barat .event-content .micro{color:#75604c}
+.barat-event-date{font-size:23px;color:#7f233b;margin:0 0 18px}
+@media(max-width:350px){.barat .scene-heading{font-size:28px}.barat-event-date{font-size:20px}.barat-video-control{font-size:9px;padding:7px}}
