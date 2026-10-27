@@ -25,3 +25,6 @@
 .barat .poster-date{font-size:22px;margin-top:22px}
 .barat .poster-time{font-size:12px;margin-top:14px}
 @media(max-width:350px){.barat .poster-copy h2{font-size:46px}.barat .poster-copy .script-sub{font-size:19px}.barat .poster-date{font-size:18px;margin-top:16px}.barat .poster-time{font-size:10px}}
+
+/* Explicit cream image compositing avoids Safari mix-blend layering differences. */
+.rsvp .couple{mix-blend-mode:normal}
