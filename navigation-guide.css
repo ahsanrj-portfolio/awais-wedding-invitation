@@ -1,0 +1,13 @@
+
+.navigation{height:auto!important;display:grid!important;grid-template-columns:1fr 1.5fr;gap:4px 12px;padding:5px 16px calc(7px + env(safe-area-inset-bottom))!important;flex-shrink:0}
+.navigation nav{grid-column:1/-1;grid-row:2;justify-content:center;gap:9px;min-width:0}
+.navigation nav button{min-height:28px;padding:4px 3px;font-size:10px}
+.navigation #back,.navigation #next{grid-row:3;width:auto;height:auto;min-height:44px;border-radius:5px;font-family:var(--sans);font-size:12px;line-height:1.3;padding:6px 10px}
+.navigation #back{grid-column:1;border:1px solid #9e174d35;color:#872140}
+.navigation #next{grid-column:2;background:#9e174d;color:#fff8ed;border:1px solid #9e174d;display:flex;flex-direction:column;align-items:center;justify-content:center}
+.navigation #next small{font-size:9px;letter-spacing:.2px;font-weight:400;margin-top:2px}
+.navigation #next:disabled{background:#e8dece;border-color:#e8dece;color:#6b5c4a;opacity:1}
+.navigation .scroll-guide{grid-column:1/-1;grid-row:1;min-height:24px;padding:2px 5px;border:0;background:none;color:#7b2943;font:11px var(--sans);display:flex;align-items:center;justify-content:center;gap:7px}
+.navigation .scroll-guide[data-end="true"]{color:#796c5d;cursor:default}
+.navigation .guide-arrow{font-size:18px;line-height:1}
+@media(max-width:350px){.navigation{padding-left:10px!important;padding-right:10px!important;gap:3px 8px}.navigation nav{gap:6px}.navigation #next,.navigation #back{font-size:11px}}
